@@ -15,16 +15,20 @@
             align-items: center;
             flex-direction: column;
             margin: 0;
-            min-height: 100vh; /* Changed height to min-height */
+            min-height: 100vh;
             text-align: center;
-            background-color: #f7f7f7; /* Added background color for better contrast */
+            background-color: #f7f7f7;
         }
-        header, main {
-            width: 60%;
-            margin-bottom: 20px;
-            text-align: left;
+        header {
+            background-color: #a29bfe; /* Lilac background color */
+            color: white; /* White text color */
+            padding: 20px;
+            text-align: center;
+            width: 100%;
         }
         main {
+            width: 60%;
+            margin: 20px;
             text-align: left;
         }
         ul {
@@ -68,14 +72,11 @@
             height: auto;
         }
         footer {
-            background-color: #a29bfe; /* Lilac background color */
-            color: white; /* Text color */
-            padding: 20px;
+            background-color: #f7f7f7; /* Lighter background for footer */
+            color: black; /* Black text color */
+            padding: 10px;
             text-align: center;
             width: 100%;
-        }
-        footer p {
-            margin: 5px 0;
         }
         .contact-info {
             display: flex;
@@ -92,13 +93,16 @@
         .contact-info a:hover {
             text-decoration: underline;
         }
+        .icon {
+            padding-right: 8px;
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>Mihika Jain</h1>
-        <p><a href="mailto:mihikajain@icloud.com">mihikajain@icloud.com</a></p>
-        <p><a href="https://www.linkedin.com/in/mihikajain/" target="_blank">Connect with me on LinkedIn</a></p>
+        <p><i class="fas fa-envelope icon"></i><a href="mailto:mihikajain@icloud.com">mihikajain@icloud.com</a></p>
+        <p><i class="fab fa-linkedin icon"></i><a href="https://www.linkedin.com/in/mihikajain/" target="_blank">Connect with me on LinkedIn</a></p>
         <p><strong>University of Glasgow</strong> <em>- MA (Hons) Economics, 2022-2026</em></p>
     </header>
     <main>
