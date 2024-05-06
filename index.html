@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mihika Jain's Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Add Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -13,24 +15,37 @@
             align-items: center;
             flex-direction: column;
             margin: 0;
-            height: 100vh;
+            min-height: 100vh; /* Changed height to min-height */
             text-align: center;
+            background-color: #f7f7f7; /* Added background color for better contrast */
         }
-        header, main, footer {
+        header, main {
             width: 60%;
             margin-bottom: 20px;
+            text-align: left;
         }
         main {
             text-align: left;
         }
+        ul {
+            padding-left: 0;
+        }
         ul li {
-            list-style-type: none; /* Removes bullets from all list items */
+            list-style-type: none;
             padding: 0;
             margin-left: 20px;
         }
+        #skills ul {
+            list-style-type: disc;
+            margin-left: 0;
+            padding-left: 20px;
+        }
+        #skills ul li {
+            margin-left: 0;
+        }
         #skills ul ul {
-            list-style-type: disc; /* Adds bullets for nested list items under 'Skills' */
-            margin-left: 40px; /* Additional indentation for nested lists */
+            list-style-type: disc;
+            margin-left: 20px;
         }
         .project {
             margin-bottom: 20px;
@@ -53,7 +68,29 @@
             height: auto;
         }
         footer {
+            background-color: #a29bfe; /* Lilac background color */
+            color: white; /* Text color */
+            padding: 20px;
             text-align: center;
+            width: 100%;
+        }
+        footer p {
+            margin: 5px 0;
+        }
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .contact-info p {
+            margin: 0 10px;
+        }
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
