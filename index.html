@@ -6,54 +6,31 @@
     <title>Mihika Jain's Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            margin: 0;
-            height: 100vh;
-            text-align: center;
-        }
-        header, main, footer {
-            width: 60%;
-            margin-bottom: 20px;
-        }
         main {
-            text-align: left;
+            width: 80%; /* Adjusting the width may help in alignment */
+            text-align: left; /* Ensure text within is aligned to the left */
+            margin: 20px auto; /* Centers the main block horizontally */
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* Aligns content to the left within the main block */
         }
-        ul li {
-            list-style-type: none; /* Removes bullets from all list items */
-            padding: 0;
-            margin-left: 20px;
-        }
-        #skills ul ul {
-            list-style-type: disc; /* Adds bullets for nested list items under 'Skills' */
-            margin-left: 40px; /* Additional indentation for nested lists */
-        }
+
         .project {
-            margin-bottom: 20px;
+            width: 100%; /* Makes the project boxes span the full width of the main block */
+            box-sizing: border-box; /* Ensures padding and border are included in the width */
             padding: 10px;
+            margin-bottom: 20px;
             border: 1px solid #ccc;
         }
-        .project h3 {
-            color: lightblue;
+
+        ul {
+            list-style-type: none; /* Removes bullets */
+            padding: 0;
         }
-        .project a {
-            color: #06c;
-            text-decoration: none;
-        }
-        .project a:hover {
-            text-decoration: underline;
-        }
-        .project img {
-            width: 100%;
-            max-width: 400px;
-            height: auto;
-        }
-        footer {
-            text-align: center;
+
+        #skills ul {
+            list-style-type: disc; /* Adds bullets back for the skills section */
+            margin-left: 20px; /* Proper indentation for the skills list */
         }
     </style>
 </head>
@@ -82,12 +59,7 @@
             <h2>Skills</h2>
             <ul>
                 <li>Python</li>
-                <li>Java
-                    <ul>
-                        <li>IOOP</li>
-                        <li>OOSE</li>
-                    </ul>
-                </li>
+                <li>Java</li>
             </ul>
         </section>
     </main>
