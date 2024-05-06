@@ -24,6 +24,37 @@
             list-style: none;
             padding: 0;
         }
+
+        .project {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc; /* Optional: adds a border */
+        }
+
+        .project h3 {
+            color: #333;
+        }
+
+        .project ul {
+            list-style-type: none; /* Removes bullet points */
+            padding: 0;
+        }
+
+        .project a {
+            color: #06c;
+            text-decoration: none; /* Removes underline */
+        }
+
+        .project a:hover {
+            text-decoration: underline; /* Adds underline on hover */
+        }
+
+        .project img {
+            width: 100%; /* Responsive image width */
+            max-width: 400px; /* Maximum size */
+            height: auto; /* Maintain aspect ratio */
+        }
+
     </style>
 </head>
 <body>
@@ -37,16 +68,17 @@
     <main>
         <section id="projects">
             <h2>Projects</h2>
-            <ul>
-                <li>
-                    <strong>Stock Prediction Application</strong>  
-                    <br>A Python tool that predicts stock market trends.
-                </li>
-                <li>
-                    <strong>Portfolio Management System</strong>  
-                    <br>A Java application to manage personal investments.
-                </li>
-            </ul>
+            <div class="project">
+                <h3>Stock Prediction Application</h3>
+                <p>A Python tool that predicts stock market trends using machine learning.</p>
+                <ul>
+                    <li><strong>Technologies:</strong> Python, Pandas, Scikit-Learn</li>
+                    <li><a href="https://github.com/yourusername/stock-prediction-app" target="_blank">View Code</a></li>
+                    <li><a href="https://yourusername.github.io/stock-prediction-app" target="_blank">Live Demo</a></li>
+                </ul>
+                <img src="path/to/screenshot.png" alt="Stock Prediction App Screenshot">
+            </div>
+            <!-- Repeat for other projects -->
         </section>
 
         <section id="skills">
