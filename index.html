@@ -36,7 +36,7 @@
             list-style-type: none; /* Remove bullets for all ul by default */
         }
         #skills ul {
-            list-style-type: disc; /* Add bullet points only to ul inside #skills */
+            list-style-type: circle; /* Add bullet points only to ul inside #skills */
             padding-left: 20px; /* Proper indent for bullets */
         }
         .project {
@@ -84,12 +84,24 @@
         .icon {
             padding-right: 8px;
         }
+        .spacer {
+            margin: 0 10px; /* adjust space as needed */
+        }
+
+        .icon {
+            padding-right: 8px;
+        }
+
     </style>
 </head>
 <body>
     <header>
         <h1>Mihika Jain</h1>
-        <p><i class="fas fa-envelope icon"></i><a href="mailto:mihikajain@icloud.com">mihikajain@icloud.com </a><i class="fab fa-linkedin icon"></i><a href="https://www.linkedin.com/in/mihikajain/" target="_blank">Connect with me on LinkedIn!</a></p>
+        <p>
+            <i class="fas fa-envelope icon"></i><a href="mailto:mihikajain@icloud.com">mihikajain@icloud.com</a>
+            <span class="spacer"></span>
+            <i class="fab fa-linkedin icon"></i><a href="https://www.linkedin.com/in/mihikajain/" target="_blank">Connect with me on LinkedIn!</a>
+        </p>
         <p><strong>University of Glasgow</strong> <em>- MA (Hons) Economics, 2022-2026</em></p>
     </header>
     <main>
