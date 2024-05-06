@@ -23,14 +23,14 @@
         main {
             text-align: left;
         }
-        ul {
-            list-style: none; /* Removes bullets from all lists */
+        ul li {
+            list-style-type: none; /* Removes bullets from all list items */
             padding: 0;
             margin-left: 20px;
         }
-        ul ul { /* Restores bullets for nested lists under skills */
-            list-style-type: disc;
-            margin-left: 40px;
+        #skills ul ul {
+            list-style-type: disc; /* Adds bullets for nested list items under 'Skills' */
+            margin-left: 40px; /* Additional indentation for nested lists */
         }
         .project {
             margin-bottom: 20px;
