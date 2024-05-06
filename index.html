@@ -4,57 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mihika Jain's Portfolio</title>
-    <link rel="stylesheet" href="assets/css/style.css">
     <style>
-        /* Centering layout using Flexbox */
+        /* General page style */
         body {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            text-align: center;
-            height: 100vh;
             margin: 0;
+            height: 100vh;
+            text-align: center;
         }
-        main, header, footer {
-            width: 60%; /* Adjust width as desired */
+
+        /* Header content centered */
+        header {
+            width: 60%;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* Main content centered horizontally but text-aligned to the left */
+        main {
+            width: 60%;
+            text-align: left;
             margin-bottom: 20px;
         }
+
+        /* Remove list styles */
         ul {
             list-style: none;
             padding: 0;
         }
 
+        /* Project style adjustments */
         .project {
             margin-bottom: 20px;
             padding: 10px;
-            border: 1px solid #ccc; /* Optional: adds a border */
+            border: 1px solid #ccc;
         }
 
+        /* Light blue headers for project titles */
         .project h3 {
-            color: #333;
-        }
-
-        .project ul {
-            list-style-type: none; /* Removes bullet points */
-            padding: 0;
+            color: lightblue;
         }
 
         .project a {
             color: #06c;
-            text-decoration: none; /* Removes underline */
+            text-decoration: none;
         }
 
         .project a:hover {
-            text-decoration: underline; /* Adds underline on hover */
+            text-decoration: underline;
         }
 
+        /* Responsive image style */
         .project img {
-            width: 100%; /* Responsive image width */
-            max-width: 400px; /* Maximum size */
-            height: auto; /* Maintain aspect ratio */
+            width: 100%;
+            max-width: 400px;
+            height: auto;
         }
 
+        /* Footer centered */
+        footer {
+            width: 60%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 <body>
@@ -68,17 +83,16 @@
     <main>
         <section id="projects">
             <h2>Projects</h2>
-            <div class="project">
-                <h3>Stock Prediction Application</h3>
-                <p>A Python tool that predicts stock market trends using machine learning.</p>
-                <ul>
-                    <li><strong>Technologies:</strong> Python, Pandas, Scikit-Learn</li>
-                    <li><a href="https://github.com/yourusername/stock-prediction-app" target="_blank">View Code</a></li>
-                    <li><a href="https://yourusername.github.io/stock-prediction-app" target="_blank">Live Demo</a></li>
-                </ul>
-                <img src="path/to/screenshot.png" alt="Stock Prediction App Screenshot">
-            </div>
-            <!-- Repeat for other projects -->
+            <ul>
+                <li class="project">
+                    <h3>Stock Prediction Application</h3>
+                    <p>A Python tool that predicts stock market trends.</p>
+                </li>
+                <li class="project">
+                    <h3>Portfolio Management System</h3>
+                    <p>A Java application to manage personal investments.</p>
+                </li>
+            </ul>
         </section>
 
         <section id="skills">
@@ -88,7 +102,6 @@
                 <li>Java - IOOP and OOSE</li>
             </ul>
         </section>
-
     </main>
 
     <footer>
