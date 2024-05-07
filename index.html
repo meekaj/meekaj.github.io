@@ -128,12 +128,14 @@
             const projectList = document.getElementById('projectList');
             projectList.innerHTML = ''; // Clear existing entries
             data.forEach(repo => {
-                const li = document.createElement('li');
-                li.className = 'project';
-                li.innerHTML = `<h3>${repo.name}</h3>
-                                <p>${repo.description || 'No description provided.'}</p>
-                                <a href="${repo.html_url}" target="_blank">View Project</a>`;
-                projectList.appendChild(li);
+                if (repo.name !== 'meekaj.github.io') {  // Exclude the portfolio repository
+                    const li = document.createElement('li');
+                    li.className = 'project';
+                    li.innerHTML = `<h3>${repo.name}</h3>
+                                    <p>${repo.description || 'No description provided.'}</p>
+                                    <a href="${repo.html_url}" target="_blank">View Project</a>`;
+                    projectList.appendChild(li);
+                }
             });
         })
         .catch(error => {
