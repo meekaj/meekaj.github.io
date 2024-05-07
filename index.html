@@ -117,21 +117,31 @@
     </footer>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            fetch('https://api.github.com/users/meekaj/repos')
-            .then(response => response.json())
-            .then(data => {
-                const projectList = document.getElementById('projectList');
-                data.forEach(repo => {
-                    const li = document.createElement('li');
-                    li.className = 'project';
-                    li.innerHTML = `<h3>${repo.name}</h3>
-                                    <p>${repo.description || 'No description provided.'}</p>
-                                    <a href="${repo.html_url}" target="_blank">View Project</a>`;
-                    projectList.appendChild(li);
-                });
-            })
-            .catch(error => console.error('Error fetching GitHub repositories:', error));
+        fetch('https://api.github.com/users/meekaj/repos')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            const projectList = document.getElementById('projectList');
+            projectList.innerHTML = ''; // Clear existing entries
+            data.forEach(repo => {
+                const li = document.createElement('li');
+                li.className = 'project';
+                li.innerHTML = `<h3>${repo.name}</h3>
+                                <p>${repo.description || 'No description provided.'}</p>
+                                <a href="${repo.html_url}" target="_blank">View Project</a>`;
+                projectList.appendChild(li);
+            });
+        })
+        .catch(error => {
+            console.error('Error fetching GitHub repositories:', error);
+            const projectList = document.getElementById('projectList');
+            projectList.innerHTML = `<li>Error loading projects.</li>`;
         });
+    });
     </script>
 </body>
 </html>
