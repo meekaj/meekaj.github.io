@@ -87,11 +87,6 @@
         .spacer {
             margin: 0 10px; /* adjust space as needed */
         }
-
-        .icon {
-            padding-right: 8px;
-        }
-
     </style>
 </head>
 <body>
@@ -107,16 +102,7 @@
     <main>
         <section id="projects">
             <h2>Projects</h2>
-            <ul>
-                <li class="project">
-                    <h3>Stock Prediction Application</h3>
-                    <p>A Python tool that predicts stock market trends.</p>
-                </li>
-                <li class="project">
-                    <h3>Portfolio Management System</h3>
-                    <p>A Java application to manage personal investments.</p>
-                </li>
-            </ul>
+            <ul id="projectList"></ul>
         </section>
         <section id="skills">
             <h2>Skills</h2>
@@ -129,5 +115,23 @@
     <footer>
         <p>Thank you for visiting my portfolio!</p>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('https://api.github.com/users/<meekaj>/repos')
+            .then(response => response.json())
+            .then(data => {
+                const projectList = document.getElementById('projectList');
+                data.forEach(repo => {
+                    const li = document.createElement('li');
+                    li.className = 'project';
+                    li.innerHTML = `<h3>${repo.name}</h3>
+                                    <p>${repo.description || 'No description provided.'}</p>
+                                    <a href="${repo.html_url}" target="_blank">View Project</a>`;
+                    projectList.appendChild(li);
+                });
+            })
+            .catch(error => console.error('Error fetching GitHub repositories:', error));
+        });
+    </script>
 </body>
 </html>
