@@ -117,7 +117,7 @@
     </footer>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            fetch('https://api.github.com/users/<meekaj>/repos')
+            fetch('https://api.github.com/users/meekaj/repos')
             .then(response => response.json())
             .then(data => {
                 const projectList = document.getElementById('projectList');
